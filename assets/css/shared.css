@@ -175,7 +175,6 @@
     }
 }
 
-<<<<<<< HEAD
 
 /* stepper */
 
@@ -568,7 +567,8 @@ input[type="checkbox"]:checked::before {
     position: relative;
     z-index: 2;
     color: #5bc0de;
-=======
+}
+
 /* Footer section */
 
 .ct-us{
@@ -578,6 +578,7 @@ input[type="checkbox"]:checked::before {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 .content1{
   position: relative;
   margin: 130px auto;
@@ -692,5 +693,4 @@ footer{
   .main-content .box{
     margin: 5px 0;
   }
->>>>>>> 7712007e1062bf21879dc319e49bc12ff316ec36
 }
