@@ -11,17 +11,29 @@ body {
     color: var(--primary);
 }
 
+.navbar {
+    position: inherit
+}
+
 a:hover {
     text-decoration: none;
 }
 
-.bg-primary { background-color: var(--primary) !important; }
+.bg-primary {
+    background-color: var(--primary) !important;
+}
 
-.bg-light { background-color: var(--light) !important; }
+.bg-light {
+    background-color: var(--light) !important;
+}
 
-.bg-grey { background-color: var(--grey) !important; }
+.bg-grey {
+    background-color: var(--grey) !important;
+}
 
-.bg-mix { background: linear-gradient(180deg, var(--light) 50%, var(--grey) 0); }
+.bg-mix {
+    background: linear-gradient(180deg, var(--light) 50%, var(--grey) 0);
+}
 
 .btn-primary {
     background-color: var(--primary);
@@ -35,13 +47,13 @@ a:hover {
 #sidebar-container {
     min-height: 100vh;
 }
-  
-#sidebar-container .logo{
+
+#sidebar-container .logo {
     padding: 0.875rem 1.25rem;
 }
-  
-#sidebar-container .menu {
-    width: 10rem;
+
+.active-menu-option {
+    background-color: #d3d3d33d;
 }
 
 #content {
@@ -58,13 +70,11 @@ a:hover {
     border-right: 1px solid var(--grey);
 }
 
-  
 @media (max-width: 768px) {
     #sidebar-container {
-      display: none;
+        display: none;
     }
     .stat {
         border: 0;
     }
-  }
-  
+}
