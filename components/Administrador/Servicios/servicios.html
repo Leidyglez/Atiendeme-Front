@@ -7,19 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="../../../vendor/bootstrap/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-    <style>
-        .select2-close-mask {
-            z-index: 2099;
-        }
-        
-        .select2-dropdown {
-            z-index: 3051;
-        }
-    </style>
+
     <!-- Styles -->
     <link rel="stylesheet" href="../../../assets/css/dashboard-style.css">
     <link rel="stylesheet" href="../../../assets/css/table.css">
@@ -31,8 +21,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Atiendeme - Manejo consultorios</title>
-
+    <title>Atiendeme - Menejo Servicios</title>
 </head>
 
 <body>
@@ -46,9 +35,9 @@
             <div class="menu">
                 <a href="#" class="d-block text-light p-3 border-0 ">Inicio</a>
                 <a href="#" class="d-block text-light p-3 border-0 ">Doctores</a>
-                <a href="#" class="d-block text-light p-3 border-0 active-menu-option">Consultorios</a>
+                <a href="#" class="d-block text-light p-3 border-0 ">Consultorios</a>
                 <a href="#" class="d-block text-light p-3 border-0 ">Secretarias</a>
-                <a href="#" class="d-block text-light p-3 border-0 ">Servicios</a>
+                <a href="#" class="d-block text-light p-3 border-0 active-menu-option">Servicios</a>
             </div>
         </div>
         <!-- Fin sidebar -->
@@ -96,10 +85,11 @@
                                                 <div class="table-title">
                                                     <div class="row">
                                                         <div class="col-sm-6">
-                                                            <h2>Manejar <b>Consultorios</b></h2>
+                                                            <h2>Manejar <b>Servicios</b></h2>
                                                         </div>
                                                         <div class="col-sm-6">
-                                                            <a href="#addConsultorioModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Agregar nuevo consultorios</span></a>
+                                                            <a href="#addDoctorModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Agregar nuevo servicio</span></a>
+                                                            <!-- <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a> -->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -107,54 +97,48 @@
                                                     <thead>
                                                         <tr>
                                                             <th>Nombre</th>
-                                                            <th>Contacto</th>
                                                             <th></th>
-                                                            <th>Dirección</th>
-                                                            <th>Doctores</th>
+                                                            <th></th>
+                                                            <th>Descripcion</th>
+                                                            <th></th>
                                                             <th>Acciones</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>Dentist Center</td>
+                                                            <td>Ortodoncia</td>
 
-                                                            <td>dcenter@mail.com | 849-666-6588</td>
+                                                            <td></td>
                                                             <td>
-                                                                <ul>
-
+                                                          
                                                             </td>
-                                                            <td>Piantini, Santo Domingo, RD</td>
+                                                            <td>Los tratamientos de ortodoncia realizan suaves movimientos que desplazan los dientes de forma individual o en bloque y
+                                                            corrigen su colocación. Tienen el doble objetivo de conseguir una buena oclusión y una correcta alineación de los
+                                                            dientes. De este modo se obtienen beneficios estéticos y funcionales.</td>
                                                             <td>
-                                                                <ul>
-                                                                    <li> Leidy Gonzales</li>
-                                                                    <li>Laura Genao</li>
-                                                                    <li> Miguel Genao</li>
-                                                                </ul>
 
                                                             </td>
                                                             <td>
-                                                                <a href="#addConsultorioModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                                                <a href="#deleteDoctorModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                                <a href="#addDoctorModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Dentacare</td>
+                                                            <td>Estética Dental</td>
 
-                                                            <td>dentalcare@mail.com | 849-666-6588</td>
+                                                            <td></td>
                                                             <td>
+                                                        
                                                             </td>
-                                                            <td>Piantini, Santo Domingo, RD</td>
+                                                            <td>Ponemos a su disposición diferentes tratamientos odontológicos que te ayudarán a mejorar la salud y apariencia de su
+                                                            boca. La mayoría de estos tratamientos para lograr una buena estética dental son sencillos e indoloros y algunos pueden
+                                                            realizarse en una sesión única con excelentes resultados.</td>
                                                             <td>
-                                                                <ul>
-                                                                    <li> Leidy Gonzales</li>
-                                                                    <li>Laura Genao</li>
-                                                                    <li> Miguel Genao</li>
-                                                                </ul>
 
                                                             </td>
                                                             <td>
-                                                                <a href="#addConsultorioModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                                                <a href="#deleteDoctorModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                                <a href="#addDoctorModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                                             </td>
                                                         </tr>
 
@@ -175,7 +159,62 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Edit Modal HTML -->
+                                    <div id="addDoctorModal" class="modal fade">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <form>
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Servicios</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Nombre</label>
+                                                                    <input type="text" class="form-control" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Descripcion</label>
+                                                                    <textarea class="form-control" required></textarea>
+                                                                </div>
+                                                            </div>
 
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                                                        <input type="submit" class="btn btn-success" value="Guardar">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Delete Modal HTML -->
+                                    <div id="deleteEmployeeModal" class="modal fade">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <form>
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Borrar servicio</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>¿Está seguro de querer borrar este servicio?</p>
+                                                        <p class="text-warning"><small>Esta tarea no se puede retroceder.</small></p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                                                        <input type="submit" class="btn btn-danger" value="Eliminar">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -184,87 +223,7 @@
             </div>
         </div>
     </div>
-    <!-- Edit Modal HTML -->
-    <div id="addConsultorioModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <form>
-                    <div class="modal-header">
-                        <h4 class="modal-title">Centro</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Nombre</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
 
-                                <div class="form-group">
-                                    <label>Correo</label>
-                                    <input type="email" class="form-control" required>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Teléfono</label>
-                                    <input type="text" class="form-control" required>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Doctores</label>
-                                    <select class="form-control" id="doctores-modal-select" required name="states[]" multiple="multiple">
-                                        <option value="Laura Gonzales">Laura Gonzales</option>
-                                            ...
-                                        <option value="Leidy Genao">Leidy Genao</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Dirección</label>
-                                    <textarea class="form-control" required></textarea>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                        <input type="submit" class="btn btn-success" value="Guardar">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- Delete Modal HTML -->
-    <div id="deleteDoctorModal" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form>
-                    <div class="modal-header">
-                        <h4 class="modal-title">Borrar Consultorio</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <p>¿Está seguro de querer borrar este consultorio?</p>
-                        <p class="text-warning"><small>Esta tarea no se puede retroceder.</small></p>
-                    </div>
-                    <div class="modal-footer">
-                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                        <input type="submit" class="btn btn-danger" value="Eliminar">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
@@ -272,8 +231,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 
-    <script src="consultorio.js"></script>
-
+    <script src="doctores.js"></script>
 
 </body>
 
