@@ -5,6 +5,8 @@ $(document).ready(function() {
         $('#centros-modal-select').select2();
 
         $('#especialidades-modal-select').select2();
+
+        $("#doctores-modal-select").select2();
     })
 
 });

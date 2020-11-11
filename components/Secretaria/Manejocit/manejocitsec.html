@@ -34,8 +34,8 @@
             </div>
             <div class="menu">
                 <a href="#" class="d-block text-light p-3 border-0 ">Inicio</a>
-                <a href="#" class="d-block text-light p-3 border-0 ">Citas</a>
-                <a href="#" class="d-block text-light p-3 border-0 active-menu-option">Pacientes</a>
+                <a href="#" class="d-block text-light p-3 border-0 active-menu-option">Citas</a>
+                <a href="#" class="d-block text-light p-3 border-0 ">Pacientes</a>
             </div>
         </div>
         <!-- Fin sidebar -->
@@ -83,12 +83,16 @@
                                                 <div class="table-title">
                                                     <div class="row">
                                                         <div class="col-sm-6">
-                                                            <h2>Manejar <b>Pacientes</b></h2>
+                                                            <h2>Manejar <b>Citas</b></h2>
                                                         </div>
+
                                                         <div class="col-sm-6">
                                                             <!-- Search form -->
-                                                            <input class="form-control" type="text" placeholder="Buscar paciente" aria-label="Search">
+                                                            <label for="gsearch">Buscar cita por nombre:</label>
+                                                            <input type="search" id="gsearch" name="gsearch">
+                                                            <button type="button" class="btn btn-success"><i class="material-icons">&#xE147;</i>Hacer una nueva cita</button>
                                                         </div>
+
                                                     </div>
                                                 </div>
 
@@ -96,10 +100,10 @@
                                                     <thead>
                                                         <tr>
                                                             <th>Nombre</th>
-                                                            <th></th>
-                                                            <th>Contacto</th>
-                                                            <th></th>
-                                                            <th></th>
+                                                            <th>Consultorio</th>
+                                                            <th>Servicio</th>
+                                                            <th>Doctor</th>
+                                                            <th>Fecha</th>
                                                             <th>Acciones</th>
                                                         </tr>
                                                     </thead>
@@ -109,7 +113,7 @@
 
                                                             <td></td>
                                                             <td>
-                                                                lgonzales@mail.com | 849-666-6588
+                                                                
                                                             </td>
                                                             <td></td>
                                                             <td>
@@ -125,7 +129,7 @@
 
                                                             <td></td>
                                                             <td>
-                                                                lGenao@mail.com | 849-631-3514
+                                                                
                                                             </td>
                                                             <td></td>
                                                             <td>
@@ -160,7 +164,7 @@
                                             <div class="modal-content">
                                                 <form>
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title">Paciente</h4>
+                                                        <h4 class="modal-title">Modificar cita</h4>
                                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                                     </div>
                                                     <div class="modal-body">
@@ -171,18 +175,45 @@
                                                                     <input type="text" class="form-control" required>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-6">
 
+                                                            <div class="col-md-12">
                                                                 <div class="form-group">
-                                                                    <label>Correo</label>
-                                                                    <input type="email" class="form-control" required>
+                                                                    <label>Consultorios</label>
+                                                                    <select class="form-control" id="especialidades-modal-select" required name="states[]" multiple="multiple">
+                                                                        <option value="Endodoncia">Endodoncia</option>
+                                                                        ...
+                                                                        <option value="Cariología">Cariología</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Servicios</label>
+                                                                    <select class="form-control" id="centros-modal-select" required name="states[]" multiple="multiple">
+                                                                        <option value="DentaCare">DentaCare</option>
+                                                                        ...
+                                                                        <option value="Centro Dental">Centro Dental</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Doctores</label>
+                                                                    <select class="form-control" id="doctores-modal-select" required name="states[]" multiple="multiple">
+                                                                        <option value="DentaCare">DentaCare</option>
+                                                                        ...
+                                                                        <option value="Centro Dental">Centro Dental</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-6">
+
                                                                 <div class="form-group">
-                                                                    <label>Teléfono</label>
-                                                                    <input type="text" class="form-control" required>
+                                                                    <label>Fecha</label>
+                                                                    <input type="email" class="form-control" required>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -202,11 +233,11 @@
                                             <div class="modal-content">
                                                 <form>
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title">Borrar paciente</h4>
+                                                        <h4 class="modal-title">Borrar cita</h4>
                                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <p>¿Está seguro de querer borrar este paciente?</p>
+                                                        <p>¿Está seguro de querer borrar este cita?</p>
                                                         <p class="text-warning"><small>Esta tarea no se puede retroceder.</small></p>
                                                     </div>
                                                     <div class="modal-footer">
@@ -233,7 +264,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 
-    <script src="doctores.js"></script>
+    <script src="menejocitsec.js"></script>
 
 </body>
 
