@@ -30,14 +30,15 @@
         <!-- Sidebar -->
         <div id="sidebar-container" class="bg-primary">
             <div class="logo">
-                <h4 class="text-light font-weight-bold mb-0">Administrador</h4>
+                <h4 class="text-light font-weight-bold mb-0">Pacientes</h4>
             </div>
             <div class="menu">
-                <a href="#" class="d-block text-light p-3 border-0 ">Inicio</a>
-                <a href="#" class="d-block text-light p-3 border-0 active-menu-option">Doctores</a>
-                <a href="#" class="d-block text-light p-3 border-0 ">Consultorios</a>
-                <a href="#" class="d-block text-light p-3 border-0 ">Secretarias</a>
-                <a href="#" class="d-block text-light p-3 border-0 ">Servicios</a>
+                <a href="#" class="d-block text-light p-3 border-0">Inicio</a>
+                <a href="#" class="d-block text-light p-3 border-0">Hacer cita</a>
+                <a href="#" class="d-block text-light p-3 border-0">Ver mis citas</a>
+                <a href="#" class="d-block text-light p-3 border-0 active-menu-option">Dependientes</a>
+                <a href="#" class="d-block text-light p-3 border-0">Ver doctores</a>
+                <a href="#" class="d-block text-light p-3 border-0">Ver servicios</a>
             </div>
         </div>
         <!-- Fin sidebar -->
@@ -85,10 +86,10 @@
                                                 <div class="table-title">
                                                     <div class="row">
                                                         <div class="col-sm-6">
-                                                            <h2>Manejar <b>Doctores</b></h2>
+                                                            <h2>Manejar <b>Dependientes</b></h2>
                                                         </div>
                                                         <div class="col-sm-6">
-                                                            <a href="#addDoctorModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Agregar nuevo doctor</span></a>
+                                                            <a href="#addDoctorModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Agregar nuevo dependiente</span></a>
                                                             <!-- <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a> -->
                                                         </div>
                                                     </div>
@@ -97,10 +98,10 @@
                                                     <thead>
                                                         <tr>
                                                             <th>Nombre</th>
-                                                            <th>Contacto</th>
-                                                            <th>Especialidades</th>
-                                                            <th>Horarios</th>
-                                                            <th>Centros</th>
+                                                            <th>Cedula o pasaporte</th>
+                                                            <th>Edad</th>
+                                                            <th>Parentesco</th>
+                                                            <th>Email</th>
                                                             <th>Acciones</th>
                                                             
                                                         </tr>
@@ -178,7 +179,7 @@
                                             <div class="modal-content">
                                                 <form>
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title">Doctor</h4>
+                                                        <h4 class="modal-title">Dependiente</h4>
                                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                                     </div>
                                                     <div class="modal-body">
@@ -192,44 +193,29 @@
                                                             <div class="col-md-6">
 
                                                                 <div class="form-group">
+                                                                    <label>Cedula o Pasaporte</label>
+                                                                    <input type="text" class="form-control" required>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Edad</label>
+                                                                    <input type="number" class="form-control" required>
+                                                                </div>
+                                                            </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Parentesco</label>
+                                                                <input type="text" class="form-control" required>
+                                                            </div>
+                                                        </div>
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
                                                                     <label>Correo</label>
                                                                     <input type="email" class="form-control" required>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label>Teléfono</label>
-                                                                    <input type="text" class="form-control" required>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-12">
-                                                                <div class="form-group">
-                                                                    <label>Especialidades</label>
-                                                                    <select class="form-control" id="especialidades-modal-select" required name="states[]" multiple="multiple">
-                                                                            <option value="Endodoncia">Endodoncia</option>
-                                                                                ...
-                                                                            <option value="Cariología">Cariología</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-12">
-                                                                <div class="form-group">
-                                                                    <label>Centros</label>
-                                                                    <select class="form-control" id="centros-modal-select" required name="states[]" multiple="multiple">
-                                                                            <option value="DentaCare">DentaCare</option>
-                                                                                ...
-                                                                            <option value="Centro Dental">Centro Dental</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label>Horarios</label>
-                                                                    <input type="text" class="form-control" required>
                                                                 </div>
                                                             </div>
 
