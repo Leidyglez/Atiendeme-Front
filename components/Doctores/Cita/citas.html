@@ -8,7 +8,6 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../../vendor/bootstrap/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="../../../assets/css/dashboard-style.css">
@@ -30,15 +29,11 @@
         <!-- Sidebar -->
         <div id="sidebar-container" class="bg-primary">
             <div class="logo">
-                <h4 class="text-light font-weight-bold mb-0">Paciente</h4>
+                <h4 class="text-light font-weight-bold mb-0">Doctores</h4>
             </div>
             <div class="menu">
                 <a href="#" class="d-block text-light p-3 border-0">Inicio</a>
-                <a href="#" class="d-block text-light p-3 border-0">Hacer cita</a>
-                <a href="#" class="d-block text-light p-3 border-0 active-menu-option">Ver mis citas</a>
-                <a href="#" class="d-block text-light p-3 border-0 ">Dependientes</a>
-                <a href="#" class="d-block text-light p-3 border-0">Ver doctores</a>
-                <a href="#" class="d-block text-light p-3 border-0">Ver servicios</a>
+                <a href="#" class="d-block text-light p-3 border-0 active-menu-option">Ver citas</a>
             </div>
         </div>
         <!-- Fin sidebar -->
@@ -86,14 +81,11 @@
                                                 <div class="table-title">
                                                     <div class="row">
                                                         <div class="col-sm-6">
-                                                            <h2><b> Mis Citas</b>
+                                                            <h2><b>Citas</b>
                                                             </h2>
                                                         </div>
 
-                                                        <div class="col-sm-6">
-                                                            <!-- Search form -->
-                                                            <button type="button" class="btn btn-success"><i class="material-icons">&#xE147;</i>Hacer una nueva cita</button>
-                                                        </div>
+
 
                                                     </div>
                                                 </div>
@@ -129,7 +121,6 @@
                                                             <th>Estado</th>
                                                             <th>Consultorio</th>
                                                             <th>Servicio</th>
-                                                            <th>Doctor</th>
                                                             <th>Fecha</th>
                                                             <th>Acciones</th>
                                                         </tr>
@@ -141,11 +132,11 @@
                                                             <td>Finalizada</td>
                                                             <td>Consultorio 1</td>
                                                             <td>Ortodoncia</td>
-                                                            <td>Maria Pili</td>
                                                             <td>
                                                                 12/12/2012 6:66 PM
                                                             </td>
                                                             <td>
+
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -154,12 +145,20 @@
                                                             <td>Pendiente</td>
                                                             <td>Consultorio 1</td>
                                                             <td>Ortodoncia</td>
-                                                            <td>Maria Pili</td>
                                                             <td>
                                                                 12/12/2012 6:66 PM
                                                             </td>
                                                             <td>
-                                                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                                <a href="#confirmarCita" class="success" data-toggle="modal">
+                                                                    <span class="material-icons">
+                                                                            book_online
+                                                                            </span>
+                                                                </a>
+                                                                <a href="#eliminarCita" class="delete" data-toggle="modal">
+                                                                    <span class="material-icons">
+                                                                                close
+                                                                            </span>
+                                                                </a>
                                                             </td>
                                                         </tr>
 
@@ -169,93 +168,55 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Edit Modal HTML -->
-                                    <div id="addDoctorModal" class="modal fade">
-                                        <div class="modal-dialog modal-lg">
+                                    <!-- Delete Modal HTML -->
+                                    <div class="modal" id="eliminarCita" tabindex="-1" role="dialog">
+                                        <div class="modal-dialog" role="document">
                                             <div class="modal-content">
-                                                <form>
-                                                    <div class="modal-header">
-                                                        <h4 class="modal-title">Modificar cita</h4>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label>Nombre</label>
-                                                                    <input type="text" class="form-control" required>
-                                                                </div>
-                                                            </div>
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title text-danger">Declinar Cita</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p> <strong class="font-weight-bold">Si elimina esta cita el cliente sera notificado.</strong><br> Favor adjuntar un comentario con la razón de esta cancelación</p>
 
-                                                            <div class="col-md-12">
-                                                                <div class="form-group">
-                                                                    <label>Consultorios</label>
-                                                                    <select class="form-control" id="especialidades-modal-select" required name="states[]" multiple="multiple">
-                                                                        <option value="Endodoncia">Endodoncia</option>
-                                                                        ...
-                                                                        <option value="Cariología">Cariología</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-12">
-                                                                <div class="form-group">
-                                                                    <label>Servicios</label>
-                                                                    <select class="form-control" id="centros-modal-select" required name="states[]" multiple="multiple">
-                                                                        <option value="DentaCare">DentaCare</option>
-                                                                        ...
-                                                                        <option value="Centro Dental">Centro Dental</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-12">
-                                                                <div class="form-group">
-                                                                    <label>Doctores</label>
-                                                                    <select class="form-control" id="doctores-modal-select" required name="states[]" multiple="multiple">
-                                                                        <option value="DentaCare">DentaCare</option>
-                                                                        ...
-                                                                        <option value="Centro Dental">Centro Dental</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-6">
-
-                                                                <div class="form-group">
-                                                                    <label>Fecha</label>
-                                                                    <input type="email" class="form-control" required>
-                                                                </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="razon">Razón</label>
+                                                                <textarea class="form-control" id="razon" rows="3"></textarea>
                                                             </div>
                                                         </div>
-
                                                     </div>
-                                                    <div class="modal-footer">
-                                                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                                                        <input type="submit" class="btn btn-success" value="Guardar">
-                                                    </div>
-                                                </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger">Declinar Cita</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Delete Modal HTML -->
-                                    <div id="deleteEmployeeModal" class="modal fade">
-                                        <div class="modal-dialog">
+
+
+                                    <!-- Realizar Cita Modal HTML -->
+                                    <div class="modal" id="confirmarCita" tabindex="-1" role="dialog">
+                                        <div class="modal-dialog" role="document">
                                             <div class="modal-content">
-                                                <form>
-                                                    <div class="modal-header">
-                                                        <h4 class="modal-title">Borrar cita</h4>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <p>¿Está seguro de querer borrar este cita?</p>
-                                                        <p class="text-warning"><small>Esta tarea no se puede retroceder.</small></p>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-                                                        <input type="submit" class="btn btn-danger" value="Eliminar">
-                                                    </div>
-                                                </form>
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Realizar Cita</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p> <strong class="font-weight-bold">De confirmar la cita iniciaría.</strong><br> Confirmar que el paciente se encuentra con usted a la hora de confirmar.</p>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-success">Confirmar Cita</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -272,10 +233,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
     <script src="../.../../../../vendor/bootstrap/bootstrap.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-
-    <script src="menejocitsec.js"></script>
 
 </body>
 

@@ -110,6 +110,10 @@ table.table td a.edit {
     color: #FFC107;
 }
 
+table.table td a.success {
+    color: #36a128;
+}
+
 table.table td a.delete {
     color: #F44336;
 }
