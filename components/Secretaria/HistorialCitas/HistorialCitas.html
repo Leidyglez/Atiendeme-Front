@@ -132,7 +132,7 @@
                                                             <th width="10%">Fecha</th>
                                                             <th width="30%">Consultorio</th>
                                                             <th width="30%">Doctor</th>
-                                                            <th width="30%">Comentario</th>
+                                                            <th width="30%">Acción</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -148,7 +148,11 @@
                                                                 Maria Pili
                                                             </td>
                                                             <td>
-                                                                Necesita una ortodoncia
+                                                                <a href="#showHistorial" class="success" data-toggle="modal">
+                                                                    <span class="material-icons">
+                                                                                search
+                                                                            </span>
+                                                                </a>
                                                             </td>
                                                         </tr>
 
@@ -164,24 +168,12 @@
                                                                 Maria Pili
                                                             </td>
                                                             <td>
-                                                                Necesita una ortodoncia
-                                                            </td>
-                                                        </tr>
+                                                                <a href="#showHistorial" class="success" data-toggle="modal">
+                                                                    <span class="material-icons">
+                                                                            search
+                                                                        </span>
+                                                                </a>
 
-
-                                                        <tr>
-                                                            <td>
-                                                                28 de agosto del 2021 18:00
-                                                            </td>
-
-                                                            <td>
-                                                                Consultorio 1
-                                                            </td>
-                                                            <td>
-                                                                Maria Pili
-                                                            </td>
-                                                            <td>
-                                                                Necesita una ortodoncia
                                                             </td>
                                                         </tr>
 
@@ -198,7 +190,32 @@
                                                                 Maria Pili
                                                             </td>
                                                             <td>
-                                                                Necesita una ortodoncia
+                                                                <a href="#showHistorial" class="success" data-toggle="modal">
+                                                                    <span class="material-icons">
+                                                                                search
+                                                                            </span>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+
+
+                                                        <tr>
+                                                            <td>
+                                                                28 de agosto del 2021 18:00
+                                                            </td>
+
+                                                            <td>
+                                                                Consultorio 1
+                                                            </td>
+                                                            <td>
+                                                                Maria Pili
+                                                            </td>
+                                                            <td>
+                                                                <a href="#showHistorial" class="success" data-toggle="modal">
+                                                                    <span class="material-icons">
+                                                                                search
+                                                                            </span>
+                                                                </a>
                                                             </td>
                                                         </tr>
 
@@ -216,7 +233,11 @@
                                                                 Maria Pili
                                                             </td>
                                                             <td>
-                                                                Necesita una ortodoncia
+                                                                <a href="#showHistorial" class="success" data-toggle="modal">
+                                                                    <span class="material-icons">
+                                                                                search
+                                                                            </span>
+                                                                </a>
                                                             </td>
                                                         </tr>
 
@@ -233,7 +254,11 @@
                                                                 Maria Pili
                                                             </td>
                                                             <td>
-                                                                Necesita una ortodoncia
+                                                                <a href="#showHistorial" class="success" data-toggle="modal">
+                                                                    <span class="material-icons">
+                                                                                search
+                                                                            </span>
+                                                                </a>
                                                             </td>
                                                         </tr>
 
@@ -250,7 +275,11 @@
                                                                 Maria Pili
                                                             </td>
                                                             <td>
-                                                                Necesita una ortodoncia
+                                                                <a href="#showHistorial" class="success" data-toggle="modal">
+                                                                    <span class="material-icons">
+                                                                                search
+                                                                            </span>
+                                                                </a>
                                                             </td>
                                                         </tr>
 
@@ -267,6 +296,28 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- Delete Modal HTML -->
+                <div id="showHistorial" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <form>
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Observaciones de la cita</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <p>Esta persona necesita volver urgentemente o perderá el diente.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
